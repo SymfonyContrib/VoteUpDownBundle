@@ -1,0 +1,16 @@
+vote_up_down_display:
+    pattern:  /example/votethumb
+    defaults:
+        _controller: VoteUpDownBundle:Default:thumbs
+
+vote_up_down_vote_up:
+    pattern:  /ajax/vud/up
+    defaults:
+        _controller: VoteUpDownBundle:Default:vote
+        direction: up
+
+vote_up_down_vote_down:
+    pattern:  /ajax/vud/down
+    defaults:
+        _controller: VoteUpDownBundle:Default:vote
+        direction: down

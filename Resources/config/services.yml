@@ -1,0 +1,7 @@
+parameters:
+#    symfony_contrib_vote_up_down.example.class: SymfonyContrib\Bundle\VoteUpDownBundle\Example
+
+services:
+#    symfony_contrib_vote_up_down.example:
+#        class: %symfony_contrib_vote_up_down.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,30 @@
+{% extends "VoteUpDownBundle::layout.html.twig" %}
+
+{% block content %}
+<div id="" class="vud-widget vud-widget-thumbs">
+    <div class="vote-thumb">
+        <div class="up-score">
+            <a href="{{ path('vote_up_down_vote_up') }}" rel="nofollow" class="" title="Vote up!"></a>
+        </div>
+
+        <div class="down-score">
+            <a href="{{ path('vote_up_down_vote_down') }}" rel="nofollow" class="" title="Vote down!"></a>
+        </div>
+    </div>
+
+    {#
+        <a href="<?php print $link_reset; ?>" rel="nofollow" class="element-invisible <?php print $link_class_reset; ?>" title="<?php print $reset_long_text; ?>">
+            <div class="<?php print $class_reset; ?>">
+                <?php print $reset_short_text; ?>
+            </div>
+        </a>
+    #}
+    <p>Points: <strong class="vote-current-score">{{ vote_sum ? vote_sum.value : 0 }}</strong></p>
+
+    {% if vote and vote.value == 1 %}
+        <p class="voted-how">You voted &lsquo;up&rsquo;</p>
+    {% elseif vote %}
+        <p class="voted-how">You voted &lsquo;down&rsquo;</p>
+    {% endif %}
+</div>
+{% endblock %}
